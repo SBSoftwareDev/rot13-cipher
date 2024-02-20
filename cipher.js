@@ -1,4 +1,4 @@
-import inquirer from "inquirer";
+// Or fher gb qevax lbhe binygvar!
 
 function rot13(str) {
     const reg = /(?!_)\w/i;
@@ -22,21 +22,5 @@ function rot13(str) {
     return result.join('');
 }
 
-inquirer
-    .prompt([
-        {
-            name: "inputText",
-            message: "Enter message to encode OR decode: "
-        }
-    ])
-    .then((answers) => {
-        console.log("Translation: ", rot13(answers.inputText));
-    })
-    .catch((error) => {
-        if (error.isTtyError) {
-            // Prompt couldn't be rendered in the current environment
-            console.error("Unable to render question: ", code);
-          } else {
-            console.error("Error: ", code);
-          }
-    });
+const example = "Live at Madison Square Garden!";
+console.log(rot13(example));
