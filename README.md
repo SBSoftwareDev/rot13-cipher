@@ -35,16 +35,16 @@ this program and seeing what sort of mistakes you can make (it's all apart of th
 *Note: In the terminal, be sure you are pointing the directory of 'main.js'*
 5) We need to install one package for Node to use (inquirer, which nicely handles user input) and 
     set up the package directory. In the terminal, run the commands
-'''
+```
 npm init -y
 npm i inquirer
-'''
+```
 The first command lets Node know that you are using external dependencies in your project,
 and makes a package.json file. The -y modifier populates the .json file with default options.
 The second command installs the package [inquirer]() in the program directory, which is used by 
 my program to gather user input.
 6) Now that we've set up the environment and libraries, run the program like so
-'''
+```
 node main.js
-'''
+```
 > [See any issues? Let me know!](https://www.DeveloperSean.com)
