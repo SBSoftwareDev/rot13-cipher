@@ -1,15 +1,21 @@
 # ROT13 Cipher (a.k.a. Caesar Cipher)
 
-**ROT13** is a simple application of an ancient, equally simple algorithm. It shifts the alphabet by 13 letters. Because there 
-are 26 letters in the alphabet, this algorithm is *its own inverse*. Applying 
-the same method twice can reverse the process!
+**ROT13** is a simple application of an ancient, equally simple algorithm. It shifts the alphabet by 13 letters. Because there are 26 letters in the alphabet, this algorithm is *its own inverse*. Applying the same method twice can reverse the process!
 
-## My Implementation
-
-This algorithm is based on the traditional A -> N key, as security is most notably
+This algorithm is based on the traditional A -> N key, as security is notably
 **not** a concern. The program shifts strings of text to or from their coded state. As a minimum requirment, this project preserves symbols and whitespace.
 Preserving case was considered, but put on the back burner. After success I cleaned 
 it up and added the case-preserving feature. Run the program twice to get your original input!
+
+## My Implementation
+
+You have to get good at input handling if you even *hope* to make it as a software developer. My apologies, I know that's a bit cynical, but it's extremely difficult to get away from. With that being said, a lot of what's in my toolbox at the moment is for just that, and I think there's a hidden beauty in the many different forms it takes. 
+
+I start by setting up two keys, namely for translating back and forth between coded states. For *ultra* efficiency, I can see only a single key being necessary and 'shifting' it on command. You could also argue that the size of the program make efficiencies like this fairly redundant, and not worth the time. 
+
+Next, I go through the input string one element at time, and see if each item is an alphanumeric character. If so, cross-reference the current character's index with the partner key, and return the character at the same index. 
+
+Alternatively, if it does *not* match as an alphanumeric character, just push it through, as it must be whitespace or punctuation.
 
 ## Want to try it out?
 Here are three ways to run my program, in order of complexity:
